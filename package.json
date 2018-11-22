@@ -12,6 +12,7 @@
     "datachannel": "^1.0.0",
     "mediastream": "0.0.5",
     "peerconnection": "^0.1.0",
+    "simple-peer": "^9.1.2",
     "webrtc": "^1.14.1"
   }
 }
