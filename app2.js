@@ -1,6 +1,9 @@
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia
+
 function bindEvents(p) {
+
     p.on('error', function (err) {
-        console.log('error',err)
+        console.log('error', err)
     })
     p.on('signal', function (data) {
         document.querySelector('#offer').textContent = JSON.stringify(data)
@@ -12,7 +15,7 @@ function bindEvents(p) {
         video.play()
     })
 
-    document.querySelector('#incoming').addEventListener('#submit',function(e){
+    document.querySelector('#incoming').addEventListener('#submit', function (e) {
         e.preventDefault()
         p.signal(JSON.parse(e.target.querySelector('textarea').value))
     })
@@ -37,10 +40,10 @@ function startPeer(initiator) {
     }, function () { })
 }
 
-document.querySelector('#start').addEventListener('click', function(e){
+document.querySelector('#start').addEventListener('click', function (e) {
     startPeer(true)
 })
 
-document.querySelector('#receive').addEventListener('click', function(e){
+document.querySelector('#receive').addEventListener('click', function (e) {
     startPeer(false)
 })
