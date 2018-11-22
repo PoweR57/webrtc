@@ -7,12 +7,23 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "datachannel": "^1.0.0",
+    "express": "^4.16.4",
     "mediastream": "0.0.5",
     "peerconnection": "^0.1.0",
     "simple-peer": "^9.1.2",
+    "twig": "^1.12.0",
     "webrtc": "^1.14.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PoweR57/webrtc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PoweR57/webrtc/issues"
+  },
+  "homepage": "https://github.com/PoweR57/webrtc#readme",
+  "description": ""
 }
