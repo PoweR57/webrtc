@@ -34,10 +34,17 @@ function startPeer(initiator) {
     }, function () { })
 }
 
-document.querySelector('#strat').addEventListener('click', function(e){
+document.querySelector('#start').addEventListener('click', function(e){
     startPeer(true)
 })
 
 document.querySelector('#receive').addEventListener('click', function(e){
     startPeer(false)
+})
+document.querySelector('#start').addEventListener('click', function (e) {
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
+        let emitterVideo = document.querySelector('#emitter-video')
+        emitterVideo.src = window.URL.createObjectURL(stream)
+        emitterVideo.play()
+    }, function () {})
 })
