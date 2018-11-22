@@ -20,10 +20,7 @@ function bindEvents(p) {
 
 
 function startPeer(initiator) {
-    navigator.getUserMedia({
-        video: true,
-        audio: true
-    }, function (stream) {
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
         let p = new SimplePeer({
             initiator: initiator,
             stream: stream,
@@ -45,7 +42,7 @@ document.querySelector('#receive').addEventListener('click', function(e){
     startPeer(false)
 })
 /*document.querySelector('#start').addEventListener('click', function (e) {
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
+    
         let emitterVideo = document.querySelector('#emitter-video')
         emitterVideo.src = window.URL.createObjectURL(stream)
         emitterVideo.play()
