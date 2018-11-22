@@ -1,3 +1,4 @@
+import { SimplePeer } from "./simplePeer.js"
 function bindEvents(p) {
     p.on('error', function (err) {
         console.log('error',err)
