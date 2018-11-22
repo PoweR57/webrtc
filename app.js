@@ -1,4 +1,4 @@
-import { SimplePeer } from "./simplePeer.js";
+import SimplePeer from "./simplePeer.js";
 
 function bindEvents(p) {
     p.on('error', function (err) {
