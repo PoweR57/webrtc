@@ -12,7 +12,10 @@ function bindEvents(p) {
         video.play()
     })
 
-    document.querySelector('#incoming').addEventListener()
+    document.querySelector('#incoming').addEventListener('#submit',function(e){
+        e.preventDefault()
+        p.signal(JSON.parse(e.target.querySelector('textarea').value))
+    })
 }
 
 
@@ -41,10 +44,10 @@ document.querySelector('#start').addEventListener('click', function(e){
 document.querySelector('#receive').addEventListener('click', function(e){
     startPeer(false)
 })
-document.querySelector('#start').addEventListener('click', function (e) {
+/*document.querySelector('#start').addEventListener('click', function (e) {
     navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(stream) {
         let emitterVideo = document.querySelector('#emitter-video')
         emitterVideo.src = window.URL.createObjectURL(stream)
         emitterVideo.play()
     }, function () {})
-})
+})*/
