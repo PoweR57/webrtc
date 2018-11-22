@@ -12,7 +12,10 @@ function bindEvents(p) {
         video.play()
     })
 
-    document.querySelector('#incoming').addEventListener()
+    document.querySelector('#incoming').addEventListener('#submit',function(e){
+        e.preventDefault()
+        p.signal(JSON.parse(e.target.querySelector('textarea').value))
+    })
 }
 
 
@@ -34,7 +37,7 @@ function startPeer(initiator) {
     }, function () { })
 }
 
-document.querySelector('#strat').addEventListener('click', function(e){
+document.querySelector('#start').addEventListener('click', function(e){
     startPeer(true)
 })
 
