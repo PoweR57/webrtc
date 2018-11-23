@@ -15,7 +15,7 @@ function bindEvents(p) {
         video.play()
     })
 
-    document.querySelector('#incoming').addEventListener('#submit', function (e) {
+    document.querySelector('#incoming').addEventListener('submit', function (e) {
         e.preventDefault()
         p.signal(JSON.parse(e.target.querySelector('textarea').value))
     })
