@@ -16,7 +16,17 @@ function bindEvents(p) {
         let video = document.querySelector('#receiver-video')
         video.volume = 0
         video.src = window.URL.createObjectURL(stream)
-        video.play()
+        var playPromise = video.play();
+        playPromise.then(_ => {
+            // Automatic playback started!
+            // Show playing UI.
+            // We can now safely pause video...
+            video.play();
+          })
+          .catch(error => {
+            // Auto-play was prevented
+            // Show paused UI.
+          });
     })
 
     document.querySelector('#incoming').addEventListener('submit', function (e) {
