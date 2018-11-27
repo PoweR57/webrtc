@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Boilerplate</title>
+  <meta charset="UTF-8">
+  <title>Webrtc</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 <style>
 body {
@@ -18,10 +19,10 @@ body {
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h2>Réception</h2>
+                <h2>Video réceptionnée</h2>
                 <video controls id="receiver-video" width="100%" height="400px"></video>
                 <p>
-                    <button id="start" class="btn btn-primary">Démarrer la conversation</button>
+                    <button id="start" class="btn btn-primary">Lancer le stream</button>
                 </p>
                 <textarea id="offer" class="form-control"></textarea>
             </div>
@@ -29,14 +30,14 @@ body {
                 <h2>Envoi</h2>
                 <video controls id="emitter-video" width="100%" height="400px"></video>
                 <p>
-                    <button id="receive" class="btn btn-default">Recevoir la conversation</button>
+                    <button id="receive" class="btn btn-default">Recevoir un stream</button>
                 </p>
                 <form id="incoming">
                     <div class="form-group">
                         <textarea class="form-control"></textarea>
                     </div>
                     <p>
-                        <button type="submit">Enregistrer l'offre</button>
+                        <button type="submit">Enregistrer coordonnée</button>
                     </p>
                 </form>
             </div>

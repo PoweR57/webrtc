@@ -18,14 +18,9 @@ function bindEvents(p) {
         video.src = window.URL.createObjectURL(stream)
         var playPromise = video.play();
         playPromise.then(_ => {
-            // Automatic playback started!
-            // Show playing UI.
-            // We can now safely pause video...
             video.play();
           })
           .catch(error => {
-            // Auto-play was prevented
-            // Show paused UI.
           });
     })
 
